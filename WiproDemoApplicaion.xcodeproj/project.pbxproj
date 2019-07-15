@@ -14,6 +14,10 @@
 		F9C2494E22DCC471000C8A3F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9C2493522DCC471000C8A3F /* LaunchScreen.storyboard */; };
 		F9C2494F22DCC471000C8A3F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F9C2493622DCC471000C8A3F /* Main.storyboard */; };
 		F9C2495122DCC471000C8A3F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F9C2493A22DCC471000C8A3F /* Assets.xcassets */; };
+		F9C2496222DCCA9E000C8A3F /* AlamofireServerConnect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2495F22DCCA9E000C8A3F /* AlamofireServerConnect.swift */; };
+		F9C2496322DCCA9E000C8A3F /* AlamofireServiceRequesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2496022DCCA9E000C8A3F /* AlamofireServiceRequesManager.swift */; };
+		F9C2496422DCCA9E000C8A3F /* AlamofireInternetConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2496122DCCA9E000C8A3F /* AlamofireInternetConnectivityManager.swift */; };
+		F9C2496722DCCADC000C8A3F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2496622DCCADC000C8A3F /* AppConstants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,6 +46,10 @@
 		F9C2493522DCC471000C8A3F /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F9C2493622DCC471000C8A3F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		F9C2493A22DCC471000C8A3F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F9C2495F22DCCA9E000C8A3F /* AlamofireServerConnect.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireServerConnect.swift; sourceTree = "<group>"; };
+		F9C2496022DCCA9E000C8A3F /* AlamofireServiceRequesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireServiceRequesManager.swift; sourceTree = "<group>"; };
+		F9C2496122DCCA9E000C8A3F /* AlamofireInternetConnectivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireInternetConnectivityManager.swift; sourceTree = "<group>"; };
+		F9C2496622DCCADC000C8A3F /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -127,6 +135,7 @@
 		F9C2491F22DCC470000C8A3F /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				F9C2495E22DCCA9E000C8A3F /* ServiceHelperClass */,
 			);
 			path = Support;
 			sourceTree = "<group>";
@@ -143,6 +152,7 @@
 		F9C2493322DCC471000C8A3F /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				F9C2496522DCCADC000C8A3F /* Constants */,
 				F9C2493422DCC471000C8A3F /* Storyboards */,
 				F9C2493922DCC471000C8A3F /* ImageAssets */,
 			);
@@ -171,6 +181,24 @@
 			children = (
 			);
 			path = Modules;
+			sourceTree = "<group>";
+		};
+		F9C2495E22DCCA9E000C8A3F /* ServiceHelperClass */ = {
+			isa = PBXGroup;
+			children = (
+				F9C2495F22DCCA9E000C8A3F /* AlamofireServerConnect.swift */,
+				F9C2496022DCCA9E000C8A3F /* AlamofireServiceRequesManager.swift */,
+				F9C2496122DCCA9E000C8A3F /* AlamofireInternetConnectivityManager.swift */,
+			);
+			path = ServiceHelperClass;
+			sourceTree = "<group>";
+		};
+		F9C2496522DCCADC000C8A3F /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				F9C2496622DCCADC000C8A3F /* AppConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -341,7 +369,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F9C2496422DCCA9E000C8A3F /* AlamofireInternetConnectivityManager.swift in Sources */,
+				F9C2496322DCCA9E000C8A3F /* AlamofireServiceRequesManager.swift in Sources */,
+				F9C2496222DCCA9E000C8A3F /* AlamofireServerConnect.swift in Sources */,
 				F9C2494C22DCC471000C8A3F /* AppDelegate.swift in Sources */,
+				F9C2496722DCCADC000C8A3F /* AppConstants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
