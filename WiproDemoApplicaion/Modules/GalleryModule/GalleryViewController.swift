@@ -20,11 +20,12 @@ class GalleryViewController: UITableViewController {
         //Register tableview cell
         tableView.register(RecordCell.self, forCellReuseIdentifier: cellId)
         
-        
+        //Initialize viewmodel
         viewModel = GalleryViewModel(dataUpdatedAction: {[weak self] in
             self?.tableView.reloadData()
         })
         
+        //addRefreshController
         addRefreshController()
         
         //Get data from server
@@ -38,6 +39,7 @@ class GalleryViewController: UITableViewController {
         })
     }
     
+    //Refresh controller added to tableview
     func addRefreshController(){
         self.refreshControl = UIRefreshControl()
         refreshControl?.tintColor = UIColor(red:0.25, green:0.72, blue:0.85, alpha:1.0)
@@ -45,13 +47,14 @@ class GalleryViewController: UITableViewController {
         self.refreshControl?.addTarget(self, action: #selector(refreshTableData(_:)), for: .valueChanged)
     }
     
+    //Refresh Tableview Data
     @objc private func refreshTableData(_ sender: Any) {
         // Fetch Table Data
         fetchTableData()
     }
     
+    //Get data from Api
     private func fetchTableData() {
-        
         viewModel.getDataFromApi(completion: {[weak self] in
             self?.title = self?.viewModel.getTitle()
             self?.refreshControl?.endRefreshing()
@@ -59,6 +62,7 @@ class GalleryViewController: UITableViewController {
     }
 }
 
+//MARK:- TableView DataSource, Delegates
 extension GalleryViewController{
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

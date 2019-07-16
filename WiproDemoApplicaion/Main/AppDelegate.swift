@@ -15,6 +15,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let gallaryViewControler = GalleryViewController(nibName: nil, bundle: nil)
+        let navigationController = UINavigationController(rootViewController: gallaryViewControler)
+        window?.rootViewController = navigationController
+        window?.makeKeyAndVisible()
+        
         return true
     }
 

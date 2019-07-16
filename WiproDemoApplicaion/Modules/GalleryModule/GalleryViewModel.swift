@@ -10,7 +10,9 @@ import Foundation
 
 class GalleryViewModel {
     
+    // Property Define
     private var dataUpdatedAction: (()->())
+
     var data : CountryResponse? {
         didSet {
             dataUpdatedAction()
@@ -25,7 +27,7 @@ class GalleryViewModel {
         return (data?.rows) ?? [Record]()
     }
     
-    func getTitle() -> String?{
+    func getTitle() -> String? {
         return data?.title
     }
     

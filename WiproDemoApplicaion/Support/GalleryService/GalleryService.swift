@@ -14,7 +14,6 @@ class GalleryService: AlamofireServerConnect {
         
         let _ = AlamofireServerConnect.requestOperationManager.get("/s/2iodh4vg0eortkl/facts.json", method: .get, parameters: nil, success: {(url : String? , responseObject: Any?) in
             
-            
             if let serverResponse = responseObject as? Dictionary<String, Any> {
                 let responseDic =  CountryResponse(fromDictionary: serverResponse)
                 self.completionBlockWithSuccess?(url, 1, responseDic, nil);

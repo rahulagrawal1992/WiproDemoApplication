@@ -29,7 +29,8 @@ class RecordCell: UITableViewCell {
     //configure dataImageView view
     private let dataImageView : UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFill // image will never be strecthed vertially or horizontally
+        imageView.contentMode = .scaleAspectFit // image will never be strecthed vertially or horizontally
+        imageView.backgroundColor = UIColor.gray
         imageView.translatesAutoresizingMaskIntoConstraints = false // enable autolayout
         imageView.clipsToBounds = true
         return imageView
@@ -70,10 +71,7 @@ class RecordCell: UITableViewCell {
         dataImageView.leadingAnchor.constraint(equalTo:self.contentView.leadingAnchor, constant:10).isActive = true
         dataImageView.widthAnchor.constraint(equalToConstant:70).isActive = true
         dataImageView.heightAnchor.constraint(equalToConstant:70).isActive = true
-       
-       // dataImageView.widthAnchor.constraint(equalTo: dataImageView.heightAnchor,
-           //                                  multiplier: 0.5)
-    dataImageView.bottomAnchor.constraint(equalTo:self.contentView.bottomAnchor).isActive = true
+      dataImageView.bottomAnchor.constraint(equalTo:self.contentView.bottomAnchor).isActive = true
        
         
         // configure containerView constraint
