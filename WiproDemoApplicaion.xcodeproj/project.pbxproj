@@ -18,6 +18,16 @@
 		F9C2496322DCCA9E000C8A3F /* AlamofireServiceRequesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2496022DCCA9E000C8A3F /* AlamofireServiceRequesManager.swift */; };
 		F9C2496422DCCA9E000C8A3F /* AlamofireInternetConnectivityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2496122DCCA9E000C8A3F /* AlamofireInternetConnectivityManager.swift */; };
 		F9C2496722DCCADC000C8A3F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2496622DCCADC000C8A3F /* AppConstants.swift */; };
+		F9C2496E22DCCC5A000C8A3F /* GalleryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2496922DCCC5A000C8A3F /* GalleryViewModel.swift */; };
+		F9C2496F22DCCC5A000C8A3F /* RecordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2496C22DCCC5A000C8A3F /* RecordCell.swift */; };
+		F9C2497022DCCC5A000C8A3F /* GalleryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2496D22DCCC5A000C8A3F /* GalleryViewController.swift */; };
+		F9C2497D22DCCCF7000C8A3F /* CountryResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2497222DCCCF6000C8A3F /* CountryResponse.swift */; };
+		F9C2497E22DCCCF7000C8A3F /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2497322DCCCF6000C8A3F /* Record.swift */; };
+		F9C2497F22DCCCF7000C8A3F /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2497522DCCCF6000C8A3F /* AppUtility.swift */; };
+		F9C2498022DCCCF7000C8A3F /* UIImegeViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2497722DCCCF7000C8A3F /* UIImegeViewExtension.swift */; };
+		F9C2498122DCCCF7000C8A3F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2497822DCCCF7000C8A3F /* UIViewExtension.swift */; };
+		F9C2498222DCCCF7000C8A3F /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2497A22DCCCF7000C8A3F /* Spinner.swift */; };
+		F9C2498322DCCCF7000C8A3F /* GalleryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2497C22DCCCF7000C8A3F /* GalleryService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +60,16 @@
 		F9C2496022DCCA9E000C8A3F /* AlamofireServiceRequesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireServiceRequesManager.swift; sourceTree = "<group>"; };
 		F9C2496122DCCA9E000C8A3F /* AlamofireInternetConnectivityManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireInternetConnectivityManager.swift; sourceTree = "<group>"; };
 		F9C2496622DCCADC000C8A3F /* AppConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
+		F9C2496922DCCC5A000C8A3F /* GalleryViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewModel.swift; sourceTree = "<group>"; };
+		F9C2496C22DCCC5A000C8A3F /* RecordCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RecordCell.swift; sourceTree = "<group>"; };
+		F9C2496D22DCCC5A000C8A3F /* GalleryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryViewController.swift; sourceTree = "<group>"; };
+		F9C2497222DCCCF6000C8A3F /* CountryResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountryResponse.swift; sourceTree = "<group>"; };
+		F9C2497322DCCCF6000C8A3F /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
+		F9C2497522DCCCF6000C8A3F /* AppUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
+		F9C2497722DCCCF7000C8A3F /* UIImegeViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImegeViewExtension.swift; sourceTree = "<group>"; };
+		F9C2497822DCCCF7000C8A3F /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
+		F9C2497A22DCCCF7000C8A3F /* Spinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
+		F9C2497C22DCCCF7000C8A3F /* GalleryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,6 +155,11 @@
 		F9C2491F22DCC470000C8A3F /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				F9C2497922DCCCF7000C8A3F /* CommonControl */,
+				F9C2497622DCCCF6000C8A3F /* Extensions */,
+				F9C2497B22DCCCF7000C8A3F /* GalleryService */,
+				F9C2497122DCCCF6000C8A3F /* Parser */,
+				F9C2497422DCCCF6000C8A3F /* Utility */,
 				F9C2495E22DCCA9E000C8A3F /* ServiceHelperClass */,
 			);
 			path = Support;
@@ -179,6 +204,7 @@
 		F9C2493B22DCC471000C8A3F /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				F9C2496822DCCC5A000C8A3F /* GalleryModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -199,6 +225,74 @@
 				F9C2496622DCCADC000C8A3F /* AppConstants.swift */,
 			);
 			path = Constants;
+			sourceTree = "<group>";
+		};
+		F9C2496822DCCC5A000C8A3F /* GalleryModule */ = {
+			isa = PBXGroup;
+			children = (
+				F9C2496922DCCC5A000C8A3F /* GalleryViewModel.swift */,
+				F9C2496A22DCCC5A000C8A3F /* Accessories */,
+				F9C2496D22DCCC5A000C8A3F /* GalleryViewController.swift */,
+			);
+			path = GalleryModule;
+			sourceTree = "<group>";
+		};
+		F9C2496A22DCCC5A000C8A3F /* Accessories */ = {
+			isa = PBXGroup;
+			children = (
+				F9C2496B22DCCC5A000C8A3F /* Cells */,
+			);
+			path = Accessories;
+			sourceTree = "<group>";
+		};
+		F9C2496B22DCCC5A000C8A3F /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				F9C2496C22DCCC5A000C8A3F /* RecordCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		F9C2497122DCCCF6000C8A3F /* Parser */ = {
+			isa = PBXGroup;
+			children = (
+				F9C2497222DCCCF6000C8A3F /* CountryResponse.swift */,
+				F9C2497322DCCCF6000C8A3F /* Record.swift */,
+			);
+			path = Parser;
+			sourceTree = "<group>";
+		};
+		F9C2497422DCCCF6000C8A3F /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				F9C2497522DCCCF6000C8A3F /* AppUtility.swift */,
+			);
+			path = Utility;
+			sourceTree = "<group>";
+		};
+		F9C2497622DCCCF6000C8A3F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F9C2497722DCCCF7000C8A3F /* UIImegeViewExtension.swift */,
+				F9C2497822DCCCF7000C8A3F /* UIViewExtension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F9C2497922DCCCF7000C8A3F /* CommonControl */ = {
+			isa = PBXGroup;
+			children = (
+				F9C2497A22DCCCF7000C8A3F /* Spinner.swift */,
+			);
+			path = CommonControl;
+			sourceTree = "<group>";
+		};
+		F9C2497B22DCCCF7000C8A3F /* GalleryService */ = {
+			isa = PBXGroup;
+			children = (
+				F9C2497C22DCCCF7000C8A3F /* GalleryService.swift */,
+			);
+			path = GalleryService;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -370,8 +464,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				F9C2496422DCCA9E000C8A3F /* AlamofireInternetConnectivityManager.swift in Sources */,
+				F9C2496E22DCCC5A000C8A3F /* GalleryViewModel.swift in Sources */,
+				F9C2498022DCCCF7000C8A3F /* UIImegeViewExtension.swift in Sources */,
+				F9C2498222DCCCF7000C8A3F /* Spinner.swift in Sources */,
+				F9C2497E22DCCCF7000C8A3F /* Record.swift in Sources */,
+				F9C2497F22DCCCF7000C8A3F /* AppUtility.swift in Sources */,
 				F9C2496322DCCA9E000C8A3F /* AlamofireServiceRequesManager.swift in Sources */,
+				F9C2498322DCCCF7000C8A3F /* GalleryService.swift in Sources */,
+				F9C2496F22DCCC5A000C8A3F /* RecordCell.swift in Sources */,
 				F9C2496222DCCA9E000C8A3F /* AlamofireServerConnect.swift in Sources */,
+				F9C2497022DCCC5A000C8A3F /* GalleryViewController.swift in Sources */,
+				F9C2498122DCCCF7000C8A3F /* UIViewExtension.swift in Sources */,
+				F9C2497D22DCCCF7000C8A3F /* CountryResponse.swift in Sources */,
 				F9C2494C22DCC471000C8A3F /* AppDelegate.swift in Sources */,
 				F9C2496722DCCADC000C8A3F /* AppConstants.swift in Sources */,
 			);

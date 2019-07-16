@@ -39,7 +39,7 @@ class AlamofireInternetConnectivityManager : NSObject{
     class func checkInternetAvailability() -> Bool {
         
         if !isInternetAvailable() {
-          //  showAlert(MSG_NETWORK_FAILURE)
+            showAlert(MSG_NETWORK_FAILURE)
             return false
         }
         else {
@@ -72,7 +72,7 @@ class AlamofireInternetConnectivityManager : NSObject{
         
         if let _localizedErrorString = localizedErrorString, localizedErrorString != ""{
             if !AlamofireInternetConnectivityManager.isAlertShown {
-            //    showAlert(_localizedErrorString)
+                showAlert(_localizedErrorString)
             }
         }
         
