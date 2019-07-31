@@ -15,7 +15,7 @@ extension UIImageView {
     public func imageFromUrl(_ urlString: String?) {
     
         guard let _urlString = urlString else {
-            self.image = nil
+            self.image = UIImage(named: "Placeholder")
             return
         }
         
@@ -23,6 +23,8 @@ extension UIImageView {
             
             if let image = response.result.value {
                 self?.image = image
+            }else{
+                self?.image = UIImage(named: "Placeholder")
             }
         }
     }

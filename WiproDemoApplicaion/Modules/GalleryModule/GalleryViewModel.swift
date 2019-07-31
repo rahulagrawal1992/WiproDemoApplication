@@ -24,7 +24,8 @@ class GalleryViewModel {
     }
     
     func getData() -> [Record] {
-        return (data?.rows) ?? [Record]()
+        
+        return (data?.rows)?.filter{$0.imageHref != nil || $0.title != nil || $0.descriptionField != nil} ?? [Record]()
     }
     
     func getTitle() -> String? {

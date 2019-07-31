@@ -1,15 +1,16 @@
 //
-//  RecordCell.swift
-//  WiproDemoApp
+//  GalleryDetailViewController.swift
+//  WiproDemoApplicaion
 //
-//  Created by Rahul Agrawal on 15/07/19.
+//  Created by Rahul Agrawal on 29/07/19.
 //  Copyright © 2019 Rahul Agrawal. All rights reserved.
 //
 
 import UIKit
 
-class RecordCell: UITableViewCell {
-   
+class GalleryDetailViewController: UIViewController {
+    
+    
     var row : Record? {
         didSet {
             dataImageView.imageFromUrl(row?.imageHref)
@@ -41,7 +42,7 @@ class RecordCell: UITableViewCell {
         let label = UILabel()
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false // enable autolayout
-        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.font = UIFont.boldSystemFont(ofSize: 18)
         label.textAlignment = .left
         return label
     }()
@@ -51,52 +52,56 @@ class RecordCell: UITableViewCell {
         let label = UILabel()
         label.textColor = .gray
         label.translatesAutoresizingMaskIntoConstraints = false // enable autolayout
-        label.font = UIFont.systemFont(ofSize: 13)
+        label.font = UIFont.systemFont(ofSize: 14)
         label.textAlignment = .left
         label.numberOfLines = 0
         return label
     }()
     
-    override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
-        super.init(style: style, reuseIdentifier: reuseIdentifier)
+    static func instance(_ data: Record) -> GalleryDetailViewController {
+        let galleryDetailViewController = GalleryDetailViewController(nibName: nil, bundle: nil)
+        galleryDetailViewController.row = data
+        return galleryDetailViewController
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
         
-        self.contentView.addSubview(dataImageView)
+        // Do any additional setup after loading the view.
+        self.view.backgroundColor = UIColor.white
+        self.setUpConstraint()
+    }
+    
+    
+    func setUpConstraint(){
+        
+        self.view.addSubview(dataImageView)
         containerView.addSubview(dataNameLabel)
         containerView.addSubview(dataDescriptionLabel)
-        self.contentView.addSubview(containerView)
+        self.view.addSubview(containerView)
         
         // configure dataImageView constraint
-        dataImageView.topAnchor.constraint(equalTo:self.contentView.topAnchor).isActive = true
-        dataImageView.leadingAnchor.constraint(equalTo:self.contentView.leadingAnchor, constant:10).isActive = true
-        dataImageView.widthAnchor.constraint(equalToConstant:70).isActive = true
-        dataImageView.heightAnchor.constraint(equalToConstant:70).isActive = true
-        dataImageView.bottomAnchor.constraint(lessThanOrEqualTo: self.containerView.bottomAnchor).isActive = true
+        dataImageView.topAnchor.constraint(equalTo:self.view.layoutMarginsGuide.topAnchor, constant: 40).isActive = true
+        dataImageView.centerXAnchor.constraint(equalTo: self.view.layoutMarginsGuide.centerXAnchor).isActive = true
+        dataImageView.widthAnchor.constraint(equalToConstant:100).isActive = true
+        dataImageView.heightAnchor.constraint(equalToConstant:100).isActive = true
         
         // configure containerView constraint
-        containerView.topAnchor.constraint(equalTo:self.contentView.topAnchor, constant:5).isActive = true
-        containerView.bottomAnchor.constraint(equalTo:self.contentView.bottomAnchor, constant:-5).isActive = true
-        containerView.leadingAnchor.constraint(equalTo:self.dataImageView.trailingAnchor, constant:10).isActive = true
-        containerView.trailingAnchor.constraint(equalTo:self.contentView.trailingAnchor, constant:-10).isActive = true
+        containerView.topAnchor.constraint(equalTo:self.dataImageView.bottomAnchor, constant:20).isActive = true
+        containerView.bottomAnchor.constraint(equalTo:self.view.layoutMarginsGuide.bottomAnchor, constant:-5).isActive = true
+        containerView.leadingAnchor.constraint(equalTo:self.view.layoutMarginsGuide.leadingAnchor, constant:10).isActive = true
+        containerView.trailingAnchor.constraint(equalTo:self.view.layoutMarginsGuide.trailingAnchor, constant:-10).isActive = true
         
         // configure dataNameLabel constraint
         dataNameLabel.topAnchor.constraint(equalTo:containerView.topAnchor).isActive = true
         dataNameLabel.leadingAnchor.constraint(equalTo:containerView.leadingAnchor).isActive = true
-       dataNameLabel.trailingAnchor.constraint(equalTo:containerView.trailingAnchor).isActive = true
+        dataNameLabel.trailingAnchor.constraint(equalTo:containerView.trailingAnchor).isActive = true
         
         // configure dataDescriptionLabel constraint
-        dataDescriptionLabel.topAnchor.constraint(equalTo:self.dataNameLabel.bottomAnchor).isActive = true
+        dataDescriptionLabel.topAnchor.constraint(equalTo:self.dataNameLabel.bottomAnchor, constant: 5).isActive = true
         dataDescriptionLabel.leadingAnchor.constraint(equalTo:containerView.leadingAnchor).isActive = true
         dataDescriptionLabel.trailingAnchor.constraint(equalTo:containerView.trailingAnchor).isActive = true
         dataDescriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo:containerView.bottomAnchor).isActive = true
-        
-        // Disable tableview selection
-        self.selectionStyle = .none
-        
     }
-    
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
-    }
-    
     
 }
