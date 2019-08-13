@@ -9,7 +9,8 @@
 import UIKit
 
 class RecordCell: UITableViewCell {
-   
+    
+   // Loading data into cell
     var row : Record? {
         didSet {
             dataImageView.imageFromUrl(row?.imageHref)
@@ -29,9 +30,9 @@ class RecordCell: UITableViewCell {
     //configure dataImageView view
     private let dataImageView : UIImageView = {
         let imageView = UIImageView()
-        imageView.contentMode = .scaleAspectFit // image will never be strecthed vertially or horizontally
-        imageView.backgroundColor = UIColor.lightGray
+        imageView.contentMode = .scaleAspectFill // image will never be strecthed vertially or horizontally
         imageView.translatesAutoresizingMaskIntoConstraints = false // enable autolayout
+        imageView.layer.cornerRadius = 40
         imageView.clipsToBounds = true
         return imageView
     }()
@@ -41,7 +42,7 @@ class RecordCell: UITableViewCell {
         let label = UILabel()
         label.textColor = .black
         label.translatesAutoresizingMaskIntoConstraints = false // enable autolayout
-        label.font = UIFont.boldSystemFont(ofSize: 16)
+        label.font = UIFont.boldSystemFont(ofSize: 20)
         label.textAlignment = .left
         return label
     }()
@@ -49,9 +50,9 @@ class RecordCell: UITableViewCell {
     //configure dataDescriptionLabel view
     private let dataDescriptionLabel : UILabel = {
         let label = UILabel()
-        label.textColor = .gray
+        label.textColor = UIColor.darkGray
         label.translatesAutoresizingMaskIntoConstraints = false // enable autolayout
-        label.font = UIFont.systemFont(ofSize: 13)
+        label.font = UIFont.boldSystemFont(ofSize: 14)
         label.textAlignment = .left
         label.numberOfLines = 0
         return label
@@ -66,11 +67,10 @@ class RecordCell: UITableViewCell {
         self.contentView.addSubview(containerView)
         
         // configure dataImageView constraint
-        dataImageView.topAnchor.constraint(equalTo:self.contentView.topAnchor).isActive = true
+        dataImageView.centerYAnchor.constraint(equalTo:self.contentView.centerYAnchor).isActive = true
         dataImageView.leadingAnchor.constraint(equalTo:self.contentView.leadingAnchor, constant:10).isActive = true
-        dataImageView.widthAnchor.constraint(equalToConstant:70).isActive = true
-        dataImageView.heightAnchor.constraint(equalToConstant:70).isActive = true
-        dataImageView.bottomAnchor.constraint(lessThanOrEqualTo: self.containerView.bottomAnchor).isActive = true
+        dataImageView.widthAnchor.constraint(equalToConstant:80).isActive = true
+        dataImageView.heightAnchor.constraint(equalToConstant:80).isActive = true
         
         // configure containerView constraint
         containerView.topAnchor.constraint(equalTo:self.contentView.topAnchor, constant:5).isActive = true
@@ -81,16 +81,17 @@ class RecordCell: UITableViewCell {
         // configure dataNameLabel constraint
         dataNameLabel.topAnchor.constraint(equalTo:containerView.topAnchor).isActive = true
         dataNameLabel.leadingAnchor.constraint(equalTo:containerView.leadingAnchor).isActive = true
-       dataNameLabel.trailingAnchor.constraint(equalTo:containerView.trailingAnchor).isActive = true
+        dataNameLabel.trailingAnchor.constraint(equalTo:containerView.trailingAnchor).isActive = true
         
         // configure dataDescriptionLabel constraint
         dataDescriptionLabel.topAnchor.constraint(equalTo:self.dataNameLabel.bottomAnchor).isActive = true
         dataDescriptionLabel.leadingAnchor.constraint(equalTo:containerView.leadingAnchor).isActive = true
         dataDescriptionLabel.trailingAnchor.constraint(equalTo:containerView.trailingAnchor).isActive = true
         dataDescriptionLabel.bottomAnchor.constraint(lessThanOrEqualTo:containerView.bottomAnchor).isActive = true
-        
-        // Disable tableview selection
+
+        // settingup cell property
         self.selectionStyle = .none
+        self.accessoryType = .disclosureIndicator
         
     }
     
@@ -98,5 +99,10 @@ class RecordCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // settingup minimum height
+    override func systemLayoutSizeFitting(_ targetSize: CGSize, withHorizontalFittingPriority horizontalFittingPriority: UILayoutPriority, verticalFittingPriority: UILayoutPriority) -> CGSize {
+        let size = super.systemLayoutSizeFitting(targetSize, withHorizontalFittingPriority: horizontalFittingPriority, verticalFittingPriority: verticalFittingPriority)
+        return CGSize(width: size.width, height: max(size.height, 100.0))
+    }
     
 }

@@ -20,6 +20,10 @@ class GalleryViewController: UITableViewController {
         //Register tableview cell
         tableView.register(RecordCell.self, forCellReuseIdentifier: cellId)
         
+        // settingup dynamic row height
+        tableView.estimatedRowHeight = 90.0
+        tableView.rowHeight = UITableView.automaticDimension
+        
         //Initialize viewmodel
         viewModel = GalleryViewModel(dataUpdatedAction: {[weak self] in
             self?.tableView.reloadData()
@@ -73,10 +77,6 @@ extension GalleryViewController{
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as! RecordCell
         cell.row = viewModel.getData()[indexPath.row]
         return cell
-    }
-    
-    override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return UITableView.automaticDimension
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

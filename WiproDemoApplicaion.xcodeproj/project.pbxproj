@@ -25,7 +25,6 @@
 		F9C2497E22DCCCF7000C8A3F /* Record.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2497322DCCCF6000C8A3F /* Record.swift */; };
 		F9C2497F22DCCCF7000C8A3F /* AppUtility.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2497522DCCCF6000C8A3F /* AppUtility.swift */; };
 		F9C2498022DCCCF7000C8A3F /* UIImegeViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2497722DCCCF7000C8A3F /* UIImegeViewExtension.swift */; };
-		F9C2498122DCCCF7000C8A3F /* UIViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2497822DCCCF7000C8A3F /* UIViewExtension.swift */; };
 		F9C2498222DCCCF7000C8A3F /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2497A22DCCCF7000C8A3F /* Spinner.swift */; };
 		F9C2498322DCCCF7000C8A3F /* GalleryService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2497C22DCCCF7000C8A3F /* GalleryService.swift */; };
 		F9C2498522DDE235000C8A3F /* GalleryViewModelTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C2498422DDE235000C8A3F /* GalleryViewModelTest.swift */; };
@@ -68,7 +67,6 @@
 		F9C2497322DCCCF6000C8A3F /* Record.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Record.swift; sourceTree = "<group>"; };
 		F9C2497522DCCCF6000C8A3F /* AppUtility.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppUtility.swift; sourceTree = "<group>"; };
 		F9C2497722DCCCF7000C8A3F /* UIImegeViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIImegeViewExtension.swift; sourceTree = "<group>"; };
-		F9C2497822DCCCF7000C8A3F /* UIViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtension.swift; sourceTree = "<group>"; };
 		F9C2497A22DCCCF7000C8A3F /* Spinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		F9C2497C22DCCCF7000C8A3F /* GalleryService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GalleryService.swift; sourceTree = "<group>"; };
 		F9C2498422DDE235000C8A3F /* GalleryViewModelTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GalleryViewModelTest.swift; sourceTree = "<group>"; };
@@ -277,7 +275,6 @@
 			isa = PBXGroup;
 			children = (
 				F9C2497722DCCCF7000C8A3F /* UIImegeViewExtension.swift */,
-				F9C2497822DCCCF7000C8A3F /* UIViewExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -478,7 +475,6 @@
 				F9C2496222DCCA9E000C8A3F /* AlamofireServerConnect.swift in Sources */,
 				F9313AA222EF07C80066FA8B /* GalleryDetailViewController.swift in Sources */,
 				F9C2497022DCCC5A000C8A3F /* GalleryViewController.swift in Sources */,
-				F9C2498122DCCCF7000C8A3F /* UIViewExtension.swift in Sources */,
 				F9C2497D22DCCCF7000C8A3F /* CountryResponse.swift in Sources */,
 				F9C2494C22DCC471000C8A3F /* AppDelegate.swift in Sources */,
 				F9C2496722DCCADC000C8A3F /* AppConstants.swift in Sources */,
